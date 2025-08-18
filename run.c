@@ -9,7 +9,7 @@ int main(void)
 {
   file_data *data = read_parameters_file(PATH);
 
-  printf("File length: %d\nFile contents:\n%s\n", data->len, data->arr);
+  printf("File length: %zu\nFile contents:\n%s\n", data->len, data->arr);
 
   free(data->arr);
   return 0;

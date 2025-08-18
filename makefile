@@ -7,6 +7,7 @@ OBJS   = $(C_SRCS:.c=.o) run.o
 TARGET = run
 
 all: $(TARGET)
+	@ ./$(TARGET) 
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
