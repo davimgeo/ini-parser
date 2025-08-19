@@ -1,15 +1,14 @@
-#infndef IO_INI_H
+#ifndef IO_INI_H
 #define IO_INI_H
 
 #include <stdio.h>
  
-typedef struct waveletPar 
+typedef struct
 {
-  int   nt   = 1001;
-  float dt   = 4e-3;
-  int   fmax = 10;
-} wavelet;
+  char*  arr;
+  size_t len;
+} file_data;
 
-FILE* read_f32_bin_model(const char *path);
+file_data* read_parameters_file(const char *path)
 
 #endif /* IO_INI_H */
